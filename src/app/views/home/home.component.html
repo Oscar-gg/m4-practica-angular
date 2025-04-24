@@ -1,0 +1,16 @@
+<h1>Hello, {{ title }}</h1>
+<app-boton (onClick)="suma()" [color]="'blue'" [texto]="'Suma'"></app-boton>
+<app-boton (onClick)="resta()" [color]="'red'" [texto]="'Resta'"></app-boton>
+{{ edad }}
+<br />
+@if (edad >= 18) {
+<p>Eres mayor de edad</p>
+} @else {
+<p>Eres menor de edad</p>
+}
+<ul>
+  @for (letra of title; track letra) {
+  <li>{{ letra }}</li>
+  }
+</ul>
+<input type="text" [(ngModel)]="title" />
